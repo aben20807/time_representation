@@ -26,14 +26,21 @@ class Time
         int min;
         int second;
         
-        int getYear();
         void setYear(int);
+        int getYear();
+        void setMonth(string);
         string& getMonth();
+        void setWeek(string);
         string& getWeek();
+        void setDate(int);
         int getDate();
+        void setHour(int);
         int getHour();
+        void setMin(int);
         int getMin();
+        void setSecond(int);
         int getSecond();
+
     private:
         int _year;
         string _month;

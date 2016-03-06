@@ -51,25 +51,49 @@ int Time::getYear()
 {
     return _year;
 }
+void Time::setMonth(string month)
+{
+    _month=month;
+}
 string& Time::getMonth()
 {
     return _month;
+}
+void Time::setWeek(string week)
+{
+    _week=week;
 }
 string& Time::getWeek()
 {
     return _week;
 }
+void Time::setDate(int date)
+{
+    _date=date;
+}
 int Time::getDate()
 {
     return _date;
+}
+void Time::setHour(int hour)
+{
+    _hour=hour;
 }
 int Time::getHour()
 {
     return _hour;
 }
+void Time::setMin(int min)
+{
+    _min=min;
+}
 int Time::getMin()
 {
     return _min;
+}
+void Time::setSecond(int second)
+{
+    _second=second;
 }
 int Time::getSecond()
 {
