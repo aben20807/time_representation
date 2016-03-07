@@ -28,8 +28,21 @@ int main()
             timenow.setHour(hour);
             timenow.setMin(min);
             timenow.setSecond(second);
-            cout<<timenow.getYear()<<" "<<timenow.getMonth()<<" "<<timenow.getWeek()<<" "<<timenow.getDate()<<endl
-                <<timenow.getHour()<<":"<<timenow.getMin()<<":"<<timenow.getSecond()<<endl;
+            //cout<<timenow.getYear()<<" "<<timenow.getMonth()<<" "<<timenow.getWeek()<<" "<<timenow.getDate()<<endl;
+            //cout<<endl<<timenow.getHour()<<":"<<timenow.getMin()<<":"<<timenow.getSecond()<<endl<<endl;
+            cout<<endl<<timenow.getHour()<<":"<<timenow.getMin()<<endl<<endl;
+        }
+        else if(mode=="i")
+        {
+            int hour,min;
+            char semicolon;
+            cout<<endl<<"The format of input you need to obey:"<<'\"'<<"hh:mm"<<'\"'<<endl<<endl;
+            cin>>hour>>semicolon>>min;
+            //cout<<hour<<" "<<min<<endl;
+            Time timeinput;
+            timeinput.setHour(hour);
+            timeinput.setMin(min);
+            cout<<endl<<timeinput.getHour()<<":"<<timeinput.getMin()<<endl<<endl;
         }
     }
     return 0;
