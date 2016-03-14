@@ -16,7 +16,7 @@ class Time
 {
     public:
         Time();
-        Time(int,string&,string&,int,int,int,int);
+        Time(int,string,string,int,int,int,int);
         
         int year;
         string month;
@@ -40,6 +40,7 @@ class Time
         int getMin();
         void setSecond(int);
         int getSecond();
+        string getEngRepre();
 
     private:
         int _year;

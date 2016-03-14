@@ -17,12 +17,6 @@ void printHelp()
         <<"e:exit from the loop."<<endl
         <<"*********************************************************"<<endl<<endl;
 }
-/*time_t now=time(NULL);
-char strl[100],_month[4],_week[4];
-int _year,_date,_hour,_min,_second;
-strcpy(strl,ctime(&now));
-sscanf(strl,"%s%s%d%d:%d:%d%d",_week,_month,&_date,&_hour,&_min,&_second,&_year);
-*/
 Time::Time()
 {
     _year=1;
@@ -33,7 +27,7 @@ Time::Time()
     _min=0;
     _second=0;
 }
-Time::Time(int year,string& month,string& week,int date,int hour,int min,int second)
+Time::Time(int year,string month,string week,int date,int hour,int min,int second)
 {
     _year=year;
     _month=month;
@@ -98,4 +92,25 @@ void Time::setSecond(int second)
 int Time::getSecond()
 {
     return _second;
+}
+string Time::getEngRepre()
+{
+    int h=_hour,m=_min;
+    string tmp="It's ";
+    switch(h)
+    {
+        case 0:
+            tmp+="zero";
+        case 1:
+            tmp+="one";
+        case 2:
+            tmp+="two";
+        case 3:
+            tmp+="three";
+        case 8:
+        case 20:
+            tmp+="eight";
+
+    }
+    return tmp;
 }
